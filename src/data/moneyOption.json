@@ -1,0 +1,8 @@
+[
+  { "amount": 10000, "weight": 40 },
+  { "amount": 20000, "weight": 28 },
+  { "amount": 2000, "weight": 13 },
+  { "amount": 5000, "weight": 15 },
+  { "amount": 50000, "weight": 2 },
+  { "amount": 100000, "weight": 2 }
+]
