@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import options from "@/data/moneyOption.json";
 import { getWeightedRandom } from "@/utils/randomMoney";
 import BackgroundGlow from "@/components/BackgroundGlow";
@@ -15,6 +15,13 @@ export default function Home() {
   const [isOpening, setIsOpening] = useState(false);
   const [showCoin, setShowCoin] = useState(false);
 
+  useEffect(() => {
+    const saved = localStorage.getItem("liXiAmount");
+    if (saved) {
+      setAmount(Number(saved));
+    }
+  }, []);
+
   const openLiXi = () => {
     if (amount) return;
 
@@ -26,9 +33,11 @@ export default function Home() {
       setIsOpening(true);
 
       const result = getWeightedRandom(options);
+      
 
       setTimeout(() => {
         setAmount(result);
+        localStorage.setItem("liXiAmount", result.toString());
         setShowCoin(true);
 
         const audio = new Audio("/coin-donation.mp3");
