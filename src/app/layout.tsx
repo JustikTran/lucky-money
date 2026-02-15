@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Lì xì may mắn 2026",
   description:
-    "Nhấn mở bao lì xì và thử vận may đầu năm của bạn.",
+    "Nhấn mở bao lì xì và thử vận may đầu năm.",
   openGraph: {
     title: "Lì xì may mắn 2026",
     description:
